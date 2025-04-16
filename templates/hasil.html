@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Diagnosa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-400 to-purple-500 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md text-center">
+        <h1 class="text-xl font-bold text-gray-800">Hasil Diagnosa</h1>
+        
+        <div id="hasil-container" class="mt-4">
+            <h2 id="penyakit" class="text-lg font-semibold text-blue-600"></h2>
+            <p id="deskripsi" class="bg-blue-100 p-2 rounded mt-2 text-gray-700"></p>
+            
+            <div class="mt-4 text-left">
+                <h3 class="font-semibold text-gray-900">Gejala:</h3>
+                <ul id="gejala" class="list-disc pl-5 text-gray-700"></ul>
+                <h3 class="font-semibold text-gray-900">Penyebab:</h3>
+                <ul id="penyebab" class="list-disc pl-5 text-gray-700"></ul>
+                <h3 class="font-semibold text-gray-900">Penularan:</h3>
+                <ul id="penularan" class="list-disc pl-5 text-gray-700"></ul>
+                <h3 class="font-semibold text-gray-900">Penanganan:</h3>
+                <ul id="penanganan" class="list-disc pl-5 text-gray-700"></ul>
+            </div>
+        </div>
+        
+        <div class="mt-5 text-sm text-red-600 bg-yellow-100 p-3 rounded">
+            <strong>Catatan:</strong> Hasil diagnosa ini hanya sebagai alat bantu dan tidak bersifat mutlak. 
+            Segera konsultasi lebih lanjut dengan dokter hewan untuk memastikan diagnosa dan mendapatkan penanganan yang tepat.
+        </div>
+
+        <button onclick="window.location.href='/index'" class="mt-6 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
+            Kembali
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const dataString = urlParams.get("data");
+
+            if (dataString) {
+                const data = JSON.parse(decodeURIComponent(dataString));
+                
+                document.getElementById("penyakit").innerHTML = data.penyakit;
+                document.getElementById("deskripsi").innerHTML = data.deskripsi;
+
+                const gejalaList = document.getElementById("gejala");
+                data.gejala.forEach(g => {
+                    const li = document.createElement("li");
+                    li.innerHTML = g;
+                    gejalaList.appendChild(li);
+                });
+                const penyebabList = document.getElementById("penyebab");
+                data.penyebab.forEach(g => {
+                    const li = document.createElement("li");
+                    li.innerHTML = g;
+                    penyebabList.appendChild(li);
+                });
+                const penularanList = document.getElementById("penularan");
+                data.penularan.forEach(g => {
+                    const li = document.createElement("li");
+                    li.innerHTML = g;
+                    penularanList.appendChild(li);
+                });
+                const penangananList = document.getElementById("penanganan");
+                data.penanganan.forEach(g => {
+                    const li = document.createElement("li");
+                    li.innerHTML = g;
+                    penangananList.appendChild(li);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

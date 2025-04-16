@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosa Penyakit Sapi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-400 to-purple-500 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-lg text-center">
+        <h1 class="text-2xl font-bold text-gray-800">Cattle Disease Diagnosis</h1>
+        <p class="text-gray-600 mt-2">Pilih gejala yang dialami sapi untuk mendapatkan diagnosa.</p>
+
+        <form id="diagnosaForm" class="mt-4 text-left">
+            <h3 class="font-semibold text-gray-900">Pilih Gejala:</h3>
+            <div class="mt-2 space-y-2">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Lepuhan di mulut" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Lepuhan di mulut</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Luka di kuku" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Luka di kuku</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Demam" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Demam</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Air liur berlebih" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Air liur berlebih</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Nafsu makan menurun" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Nafsu makan menurun</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Pincang" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Pincang</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Produksi susu menurun" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Produksi susu menurun</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Keguguran" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Keguguran</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kelenjar susu bengkak dan memerah" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kelenjar susu bengkak dan memerah</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Pembengkakan kelenjar susu" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Pembengkakan kelenjar susu</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Pembengkakan sendi" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Pembengkakan sendi</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Pembengkakan testis" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Pembengkakan testis</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kelahiran anak sapi lemah" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kelahiran anak sapi lemah</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kematian mendadak" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kematian mendadak</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Keluarnya darah hitam dari lubang tubuh" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Keluarnya darah hitam dari lubang tubuh</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Sesak napas" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Sesak napas</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kejang" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kejang</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Keluar cairan dari mata dan hidung" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Keluar cairan dari mata dan hidung</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Keluar darah dari mulut atau hidung" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Keluar darah dari mulut atau hidung</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Hidung berlendir" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Hidung berlendir</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Mata berair dan belekan" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Mata berair dan belekan</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Susu berwarna keruh atau bercampur darah" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Susu berwarna keruh atau bercampur darah</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Nyeri saat pemerahan" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Nyeri saat pemerahan</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Penurunan berat badan" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Penurunan berat badan</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Nafas berbau manis" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Nafas berbau manis</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Lesu" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Lesu</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Anemia" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Anemia</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Benjolan di kulit sebesar kelereng" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Benjolan di kulit sebesar kelereng</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Pembengkakan di kaki" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Pembengkakan di kaki</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Bau busuk dari kaki" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Bau busuk dari kaki</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kesulitan berdiri atau bergerak" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kesulitan berdiri atau bergerak</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Pembengkakan leher" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Pembengkakan leher</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Gangguan pernapasan" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Gangguan pernapasan</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Gatal-gatal pada kulit" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Gatal-gatal pada kulit</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Pembengkakan di sekitar mata" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Pembengkakan di sekitar mata</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Mata tertutup" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Mata tertutup</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Bintik putih di mata" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Bintik putih di mata</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Mata keruh" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Mata keruh</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Diare" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Diare</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Bulu kusam" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Bulu kusam</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Telinga terkulai" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Telinga terkulai</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kekurusan" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kekurusan</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kerak-kerak pada kulit" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kerak-kerak pada kulit</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kerontokan bulu" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kerontokan bulu</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kulit menjadi tebal dan kaku" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kulit menjadi tebal dan kaku</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kulit kemerahan atau mengering" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kulit kemerahan atau mengering</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Kulit melepuh" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Kulit melepuh</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Lesi di mulut" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Lesi di mulut</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Feses berbau menyengat" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Feses berbau menyengat </span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" name="gejala" value="Feses disertai bercak darah" class="form-checkbox text-blue-500">
+                    <span class="text-gray-700">Feses disertai bercak darah</span>
+                </label>
+            </div>
+
+            <button type="button" onclick="submitDiagnosa()" class="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
+                Diagnosa Sekarang
+            </button>
+        </form>
+    </div>
+
+    <script>
+        function submitDiagnosa() {
+            let gejala_terpilih = [];
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach((el) => {
+                gejala_terpilih.push(el.value);
+            });
+
+            if (gejala_terpilih.length < 3) {
+            alert("Silakan pilih minimal 3 gejala sebelum melakukan diagnosa.");
+            return;
+            }
+
+            fetch("/diagnosa", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ gejala: gejala_terpilih })
+            })
+            .then(response => response.json())
+            .then(data => {
+                window.location.href = "/hasil?data=" + encodeURIComponent(JSON.stringify(data));
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>

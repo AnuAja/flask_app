@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Persetujuan Diagnosa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-400 to-purple-500 flex flex-col items-center justify-center min-h-screen px-4 py-8">
+
+    <div class="flex flex-col items-center mb-8">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Sistem" class="h-32 mb-4">
+        <h1 class="text-3xl font-bold text-white text-center">Cattle Disease Diagnosis</h1>
+    </div>
+
+    <div class="bg-white/50 p-3 rounded-xl shadow-xl max-w-xl mx-auto mt-10 backdrop-blur-sm text-center">
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+            Sistem ini hanya digunakan sebagai alat bantu untuk memprediksi penyakit sapi berdasarkan gejala. Hasil diagnosa yang ditampilkan oleh sistem ini merupakan hasil prediksi berbasis data dan metode K-Nearest Neighbors (KNN).
+            <br><br>
+            <span class="text-red-500 font-semibold">Sistem ini tidak dapat menggantikan pemeriksaan langsung oleh tenaga kesehatan hewan. Untuk mendapatkan diagnosa dan penanganan yang akurat, selalu konsultasikan dengan dokter hewan atau tenaga ahli terkait.</span>
+            <br><br>
+            Dengan melanjutkan, Anda menyatakan telah memahami bahwa hasil diagnosa adalah prediksi berbasis data.
+        </p>
+    </div>
+    <a href="{{ url_for('index') }}" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition">
+        Saya Mengerti dan Lanjutkan
+    </a>
+
+</body>
+</html>
